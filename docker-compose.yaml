@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+ mysql:
+   image: mysql:8.0.32
+   restart: unless-stopped
+   environment:
+     MYSQL_ROOT_PASSWORD: admin
+     MYSQL_DATABASE: work_plan
+     TZ: Asia/Shanghai
+   ports:
+     - "3306:3306"
+   volumes:
+     - ./data/mysql:/var/lib/mysql
+     - ./mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf
+   healthcheck:
+     test: "/usr/bin/mysql --user=root --password=admin --execute \"SHOW DATABASES;\""
+     timeout: 45s
+     interval: 10s
+     retries: 10
