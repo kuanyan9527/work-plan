@@ -5,6 +5,10 @@
 <!-- 4. 安装flask-sqlalchemy 3.1.1 -->
 5. 安装cryptography       44.0.0
 6. 安装SQLAlchemy 2.0.36
+7. Flask-SQLAlchemy   3.1.1
+8. Flask-Migrate      4.1.0
+9. PySnooper          1.2.1
+10. Flask-AppBuilder          4.5.2
 
 ## 表
 - 项目：id，项目名，项目状态

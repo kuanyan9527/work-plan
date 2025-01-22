@@ -1,6 +1,6 @@
 from flask import Blueprint
 
-bp = Blueprint('my_blueprint', __name__)
+bp = Blueprint('work_plan_blueprint', __name__)
 
 @bp.route('/')
 def hello_world():
